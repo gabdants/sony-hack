@@ -22,6 +22,7 @@ import {MatCardModule} from '@angular/material/card';
 import { SharedModule } from './shared/shared.module';
 import { IndexComponent } from './index/index.component';
 import { HomeLogadoComponent } from './home-logado/home-logado.component';
+import { ResultadoComponent } from './resultado/resultado.component';
 
 
 
@@ -33,6 +34,7 @@ import { HomeLogadoComponent } from './home-logado/home-logado.component';
     NewUserComponent,
     IndexComponent,
     HomeLogadoComponent,
+    ResultadoComponent,
     
   ],
   imports: [

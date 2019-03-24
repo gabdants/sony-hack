@@ -131,16 +131,20 @@
                         </mat-form-field>
                         <div>
                           <button class="next-prev" mat-button matStepperPrevious>Back</button>
-                          <button class="next-prev" mat-button matStepperNext>Next</button>
+                          <button class="next-prev" mat-button  matStepperNext (click)="submitQuest()">Finalizar</button>
                         </div>
                       </form>
                     </mat-step>
           
           <mat-step>
             <ng-template matStepLabel>Done</ng-template>
-            Muito obrigado por participar da nossa plataforma!
+            <h1 class="resultado">Seu resultado foi: <br />
+              <span>{{result}}</span> 
+            </h1>
+
+            <h1 style="font-weight: 100;">Bora começar a se desenvolver nessa área?</h1>
             <div>
-              <button class="next-prev" mat-button (click)="submitQuest()">Finalizar</button>
+              
             </div>
           </mat-step>
         </mat-horizontal-stepper>

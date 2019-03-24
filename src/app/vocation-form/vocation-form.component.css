@@ -54,3 +54,10 @@ input {
     z-index: 0;
     width: 100%;
 }
+.resultado{
+    font-weight: 100;
+}
+.resultado span{
+    color: #df8716;
+    font-weight: bold;
+}
