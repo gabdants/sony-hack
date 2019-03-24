@@ -43,5 +43,5 @@ app-vocation-form .mat-horizontal-content-container{
     background: transparent !important;
 }
 .mat-stepper-horizontal, .mat-stepper-vertical{
-    background: transparent;
+    background: transparent !important;
 }
