@@ -1,0 +1,152 @@
+<div class="second-section" style="height: 100%">
+  <div class="descubra-talento">
+      <mat-horizontal-stepper [linear]="isLinear" #stepper>
+          <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+              <ng-template matStepLabel>Fill out your name</ng-template>
+              <mat-form-field>
+                <label>Idade:</label>
+                <input matInput placeholder="" formControlName="firstCtrl" required type="number">
+              </mat-form-field>
+              <div>
+                <button class="next-prev" mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+              <ng-template matStepLabel></ng-template>
+              <label>Desde quando quer entrar para o ramo musical?</label>
+              <mat-radio-group formControlName="secondCtrl" >
+                  <mat-radio-button value="A">0 A 2 ANOS</mat-radio-button>
+                  <mat-radio-button value="B">2 A 4</mat-radio-button>
+                  <mat-radio-button value="C">5 OU MAIS</mat-radio-button>
+            </mat-radio-group>
+              <div>
+                <button class="next-prev" mat-button matStepperPrevious>Back</button>
+                <button class="next-prev" mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+      
+          
+            <mat-step [stepControl]="thirdFormGroup">
+              <form [formGroup]="thirdFormGroup">
+                <ng-template matStepLabel>Fill out your address</ng-template>
+                <label>Mas então... Qual seu talento ?</label>
+                <mat-radio-group formControlName="thirdCtrl" >
+                    <mat-radio-button value="Toco algum instrumento">Toco algum instrumento</mat-radio-button>
+                    <mat-radio-button value="Gosto de ajudar meus colegas que tocam algo">Gosto de ajudar meus colegas que tocam algo</mat-radio-button>
+                    <mat-radio-button value="Gosto de anunciar o trabalho dos meus amigos">Gosto de anunciar o trabalho dos meus amigos</mat-radio-button>
+                    <mat-radio-button value="Gosto de manter uma amizade com pessoas no meio musical">Gosto de manter uma amizade com pessoas no meio musical</mat-radio-button>
+              </mat-radio-group>
+                <div>
+                  <button class="next-prev" mat-button matStepperPrevious>Back</button>
+                  <button class="next-prev" mat-button matStepperNext>Next</button>
+                </div>
+              </form>
+            </mat-step>
+      
+            <mat-step [stepControl]="fourthFormGroup">
+              <form [formGroup]="fourthFormGroup">
+                <ng-template matStepLabel>Fill out your address</ng-template>
+                <label>Já botou a mão na massa ? (fez algum projeto?)</label>
+                <mat-radio-group formControlName="fourthCtrl" >
+                    <mat-radio-button value="sim">Sim</mat-radio-button>
+                    <mat-radio-button value="nao">Não</mat-radio-button>
+              </mat-radio-group>
+                <div>
+                  <button class="next-prev" mat-button matStepperPrevious>Back</button>
+                  <button class="next-prev" mat-button matStepperNext>Next</button>
+                </div>
+              </form>
+            </mat-step>
+      
+            <mat-step [stepControl]="fifthFormGroup">
+              <form [formGroup]="fifthFormGroup">
+                <ng-template matStepLabel>Fill out your address</ng-template>
+                <label>Onde vc se encaixaria no mundo da musica?</label>
+                <mat-radio-group formControlName="fifthCtrl" >
+                    <mat-radio-button value="Nao, faco ideia...">Nao, faco ideia...</mat-radio-button>
+                    <mat-radio-button value="Sou extrovertido e gosto ajudar as pessoas">Sou extrovertido e gosto ajudar as pessoas</mat-radio-button>
+                    <mat-radio-button value="Sou mais na minha, mas gosto de estar em ambientes barulhentos">Sou mais na minha, mas gosto de estar em ambientes barulhentos</mat-radio-button>
+              </mat-radio-group>
+                <div>
+                  <button class="next-prev" mat-button matStepperPrevious>Back</button>
+                  <button class="next-prev" mat-button matStepperNext>Next</button>
+                </div>
+              </form>
+            </mat-step>
+      
+            <mat-step [stepControl]="sixthFormGroup">
+                <form [formGroup]="sixthFormGroup">
+                  <ng-template matStepLabel>Fill out your address</ng-template>
+                  <label>vc ja fez algum curso ou aula relacionada a musica?</label>
+                  <mat-radio-group formControlName="sixthCtrl" >
+                      <mat-radio-button value="sim">Sim</mat-radio-button>
+                      <mat-radio-button value="nao">Não</mat-radio-button>
+                </mat-radio-group>
+                  <div>
+                    <button class="next-prev" mat-button matStepperPrevious>Back</button>
+                    <button class="next-prev" mat-button matStepperNext>Next</button>
+                  </div>
+                </form>
+              </mat-step>
+      
+              <mat-step [stepControl]="seventhFormGroup">
+                  <form [formGroup]="seventhFormGroup">
+                    <ng-template matStepLabel>Fill out your address</ng-template>
+                    <mat-form-field>
+                      <label>Qual é o seu sonho no ramo da musica?(pode viajar rs)?</label>
+                      <input matInput placeholder="" formControlName="seventhCtrl" required type="text">
+                    </mat-form-field>
+                    <div>
+                      <button class="next-prev" mat-button matStepperPrevious>Back</button>
+                      <button class="next-prev" mat-button matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+      
+                <mat-step [stepControl]="eighthFormGroup">
+                    <form [formGroup]="eighthFormGroup">
+                      <ng-template matStepLabel>Fill out your address</ng-template>
+                      <label>Está disposto a aperfeiçoar as suas habilidades musicais?</label>
+                      <mat-radio-group formControlName="eighthCtrl" >
+                          <mat-radio-button value="sim">Sim</mat-radio-button>
+                          <mat-radio-button value="nao">Não</mat-radio-button>
+                    </mat-radio-group>
+                      <div>
+                        <button class="next-prev" mat-button matStepperPrevious>Back</button>
+                        <button class="next-prev" mat-button matStepperNext>Next</button>
+                      </div>
+                    </form>
+                  </mat-step>
+      
+                  <mat-step [stepControl]="ninthFormGroup">
+                      <form [formGroup]="ninthFormGroup">
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+                        <mat-form-field>
+                          <label>Entre com seu email, e saiba sua vocação:</label>
+                          <input matInput placeholder="" formControlName="ninthCtrl" required type="text">
+                        </mat-form-field>
+                        <div>
+                          <button class="next-prev" mat-button matStepperPrevious>Back</button>
+                          <button class="next-prev" mat-button matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+          
+          <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            Muito obrigado por participar da nossa plataforma!
+            <div>
+              <button class="next-prev" mat-button (click)="submitQuest()">Finalizar</button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+  </div>
+</div>
+<div class="bg-header">
+
+</div>
+  

@@ -1,0 +1,63 @@
+<div class="second-section" style="height: 100%">
+  <div class="descubra-talento">
+    <div>
+        <form [formGroup]="userForm" (submit)="createUser()">
+          <div class="meia-coluna">
+            <mat-form-field>
+                <label>Nome de usuário: </label>
+                <input matInput  [(ngModel)]="user.userName" formControlName="username" type="text">
+              </mat-form-field>
+
+              <mat-form-field>
+                <label>E-mail: </label>
+                <input matInput  [(ngModel)]="user.email" formControlName="email" type="text">
+              </mat-form-field>
+            
+              <mat-form-field>
+                <label>Telefone: </label>
+                <input matInput  [(ngModel)]="user.phoneNumber" formControlName="phoneNumber" type="text">
+              </mat-form-field>
+            
+              <mat-form-field>
+                <label>Gênero: </label>
+                <input matInput  [(ngModel)]="user.gender" formControlName="gender" type="text">
+              </mat-form-field>
+            </div>
+            <div class="meia-coluna">
+              <mat-form-field>
+                <label>Categoria: </label>
+                <input matInput  [(ngModel)]="user.carreer_type" formControlName="carreer_type" type="text">
+              </mat-form-field>
+            
+              <mat-form-field>
+                <label>Tempo de experiência: </label>
+                <input matInput  [(ngModel)]="user.experienceYears" formControlName="experienceYears" type="text">
+              </mat-form-field>
+            
+              <mat-form-field>
+                <label>Nível de experiência: </label>
+                <input matInput  [(ngModel)]="user.experienceLevel" formControlName="experienceLevel" type="text">
+              </mat-form-field>
+            
+              <mat-form-field>
+                <label>Senha: </label>
+                <input matInput  [(ngModel)]="user.password" formControlName="password" type="text">
+              </mat-form-field>
+            </div>
+              <button
+                      mat-raised-button
+                      type="submit"
+                      color="primary"
+                      class="w-50 next-prev"
+
+                      
+                    >
+                      Cadastrar
+                    </button>
+        </form>
+      
+
+      
+    </div>
+  </div>
+</div>

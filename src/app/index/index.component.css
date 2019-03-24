@@ -1,0 +1,42 @@
+.first-section{
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/bg_home.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.second-section {
+    height: 100%;
+    width: 100%;
+}
+.descubra-talento{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 18%;
+}
+.descubra-talento h3{
+    margin: 0;
+    font-size: 60px;
+    color: #df8716;
+}
+.bt-comecar{
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 10px;
+    padding: 9px;
+    color: #fff;
+    width: 312px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.2s all; 
+    font-size: 20px;
+}
+.bt-comecar:hover{
+    background: #fff;
+    color: #df8716 !important; 
+}
+
+
