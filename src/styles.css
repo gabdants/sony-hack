@@ -39,3 +39,9 @@ app-vocation-form .mat-horizontal-content-container{
     padding: 80px 50px;
     border-radius: 20px;
 }
+.mat-toolbar{
+    background: transparent !important;
+}
+.mat-stepper-horizontal, .mat-stepper-vertical{
+    background: transparent;
+}

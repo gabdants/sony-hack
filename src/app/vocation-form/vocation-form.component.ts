@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { VocationService } from './vocation.service'
-
+import { Routes, RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-vocation-form',
@@ -9,6 +9,7 @@ import { VocationService } from './vocation.service'
   styleUrls: ['./vocation-form.component.css']
 })
 export class VocationFormComponent implements OnInit {
+
 
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
@@ -33,8 +34,10 @@ export class VocationFormComponent implements OnInit {
     email: '',
   };
 
-
-  constructor(private _formBuilder: FormBuilder, private vocationService: VocationService,) {}
+  result: String;
+  constructor(private _formBuilder: FormBuilder, 
+    private vocationService: VocationService,
+    private router: Router,) {}
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -85,7 +88,11 @@ export class VocationFormComponent implements OnInit {
       console.log('foi');
       console.log(response);
     }, error => {
-      console.error(error);
+      this.result = error['error']['text'];
+      //this.router.navigate(['/resultado'], 
+      //{queryParams: result});
+
+
       console.error(error['error']['text']);
     });
 
