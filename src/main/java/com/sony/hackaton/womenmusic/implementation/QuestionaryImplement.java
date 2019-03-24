@@ -113,7 +113,7 @@ public class QuestionaryImplement {
             int[] arr = {3,5,6,7,8};
             finalNumber.add(rd.nextInt(arr.length));
         }
-        else if (talent.equalsIgnoreCase("Gosto de manter uma")){
+        else if (talent.equalsIgnoreCase("Gosto de manter uma amizade com pessoas no meio musical")){
             Random rd = new Random();
             int[] arr = {2,3,5,8};
             finalNumber.add(rd.nextInt(arr.length));

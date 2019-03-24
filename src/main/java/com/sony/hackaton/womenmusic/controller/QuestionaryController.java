@@ -17,10 +17,10 @@ public class QuestionaryController {
         try{
 
             QuestionaryImplement imp = new QuestionaryImplement();
-            return "OK" + imp.generateVoc(quest);
+            return imp.generateVoc(quest);
 
         }catch (Exception e){
-            return "Usuario nao Criado - Causa:" + e.getMessage();
+            return "Problema - Causa:" + e.getMessage();
 
         }
 
