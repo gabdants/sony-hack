@@ -187,23 +187,23 @@ public class QuestionaryImplement {
         int num = mode(finalNumber);
 
         if(num == artist){
-            return "A SUA VOCAÇAO É ARTISTA ";
+            return "ARTISTx";
         }
         else if(num == composer){
-            return "A SUA VOCAÇAO É COMPOSITOR";
+            return "COMPOSITORx";
         }
         else if(num == eventProducer){
-            return "A SUA VOCAÇAO É PRODUTOR DE EVENTOS ";
+            return "EVENTOS";
         }else if(num == soundOperator){
-            return "A SUA VOCAÇAO É OPERADOR DE SOM ";
+            return "OPERADORx DE SOM";
         }else if(num == headhunter){
-            return "A SUA VOCAÇAO É A & R (Caça Talentos) ";
+            return "A & R (Caça Talentos)";
         }else if(num == publishingCompany){
-            return "A SUA VOCAÇAO É EDITORA";
+            return "EDITORx";
         }else if(num == audioVisual){
-            return "A SUA VOCAÇAO É PRODUÇÃO AUDIOVISUAL";
+            return "PRODUÇÃO AUDIOVISUAL";
         }else if(num == business){
-            return "A SUA VOCAÇAO É EMPRESARIx";
+            return "EMPRESARIx";
         }
 
 

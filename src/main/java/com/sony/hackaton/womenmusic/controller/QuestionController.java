@@ -19,7 +19,7 @@ public class QuestionController {
     @Autowired
     AnswerRepository AnswerRepository;
 
-    @PostMapping(value = "/question")
+    @PostMapping(value = "/create")
     public String createQuestion(@RequestBody QuestionPoints question){
 
         try{
