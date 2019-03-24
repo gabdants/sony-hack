@@ -2,16 +2,16 @@ package com.sony.hackaton.womenmusic.dao;
 
 import java.util.List;
 
-public class UserDAO {
+public class User {
 
     String name;
     String email;
     String phoneNumber;
-    String points;
+    String points = "0";
     String gender;
     String carreer_type;
     String experienceYears;
-    List<String> experienceLevel;
+    String experienceLevel;
 
     public String getName() {
         return name;
@@ -69,11 +69,11 @@ public class UserDAO {
         this.experienceYears = experienceYears;
     }
 
-    public List<String> getExperienceLevel() {
+    public String getExperienceLevel() {
         return experienceLevel;
     }
 
-    public void setExperienceLevel(List<String> experienceLevel) {
+    public void setExperienceLevel(String experienceLevel) {
         this.experienceLevel = experienceLevel;
     }
 }
