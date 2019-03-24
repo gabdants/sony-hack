@@ -5,6 +5,8 @@ import java.util.List;
 public class User {
 
     String name;
+    String userName;
+    String password;
     String email;
     String phoneNumber;
     String points = "0";
@@ -75,5 +77,21 @@ public class User {
 
     public void setExperienceLevel(String experienceLevel) {
         this.experienceLevel = experienceLevel;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
