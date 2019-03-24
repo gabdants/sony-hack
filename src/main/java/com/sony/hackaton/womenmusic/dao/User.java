@@ -1,9 +1,14 @@
 package com.sony.hackaton.womenmusic.dao;
 
+import org.springframework.data.annotation.Id;
+
 import java.util.List;
 
 public class User {
 
+    @Id
+    private String id;
+    String idUser;
     String name;
     String userName;
     String password;
@@ -14,6 +19,14 @@ public class User {
     String carreer_type;
     String experienceYears;
     String experienceLevel;
+
+    public String getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(String idUser) {
+        this.idUser = idUser;
+    }
 
     public String getName() {
         return name;

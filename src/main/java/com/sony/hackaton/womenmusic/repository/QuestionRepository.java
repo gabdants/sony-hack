@@ -8,6 +8,5 @@ public interface QuestionRepository extends MongoRepository<QuestionPoints, Stri
 
     QuestionPoints findByIdQuestion(String idQuestion);
 
-
 }
 
