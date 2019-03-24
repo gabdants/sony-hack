@@ -2,11 +2,11 @@
   "name": "codestageapp",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild": "cd dist && npm install",
+    
     "preinstall": "npm install -g angular-cli",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
