@@ -1,6 +1,7 @@
 package com.sony.hackaton.womenmusic.implementation;
 
 import com.sony.hackaton.womenmusic.dao.Questionary;
+import com.sony.hackaton.womenmusic.dao.Types;
 import org.apache.commons.lang3.Range;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.Random;
 
 public class QuestionaryImplement {
 
-    private String generateVoc(Questionary quest){
+    public String generateVoc(Questionary quest){
 
         int artist = 1;
         int composer = 2;
@@ -20,6 +21,7 @@ public class QuestionaryImplement {
         int publishingCompany = 6;
         int audioVisual = 7;
         int business = 8;
+
 
         List<Integer> finalNumber = new ArrayList<>();
 
@@ -134,12 +136,103 @@ public class QuestionaryImplement {
 
 //        help world STEP
 
-//        String fit = quest
+        String fit = quest.getWhereFitQuest();
+
+        if (fit.equalsIgnoreCase("Nao, faco ideia...")){
+            Random rd = new Random();
+            int[] arr = {4,6,7};
+            finalNumber.add(rd.nextInt(arr.length));
+        }
+        else if (fit.equalsIgnoreCase("Sou extrovertido e gosto ajudar as pessoas")){
+            Random rd = new Random();
+            int[] arr = {1,2,3,5,7,8};
+            finalNumber.add(rd.nextInt(arr.length));
+        }
+        else if (fit.equalsIgnoreCase("Sou mais na minha, mas gosto de estar em ambientes barulhentos")){
+            Random rd = new Random();
+            int[] arr = {3,4,7};
+            finalNumber.add(rd.nextInt(arr.length));
+        }
+
+//        course STEP
+
+        String course = quest.getCourseQuest();
+
+        if(course.equalsIgnoreCase("sim")){
+            Random rd = new Random();
+            int[] arr = {1,2,3,7,8};
+            finalNumber.add(rd.nextInt(arr.length));
+        }
+        else if(course.equalsIgnoreCase("nao")){
+            Random rd = new Random();
+            int[] arr = {4,5,6};
+            finalNumber.add(rd.nextInt(arr.length));
+        }
+
+//        perfect STEP
+
+        String perf = quest.getPerfectionQuest();
+
+        if(course.equalsIgnoreCase("sim")){
+            Random rd = new Random();
+            int[] arr = {1,2,3,7,8};
+            finalNumber.add(rd.nextInt(arr.length));
+        }
+        else if(course.equalsIgnoreCase("nao")){
+            Random rd = new Random();
+            int[] arr = {4,5,6};
+            finalNumber.add(rd.nextInt(arr.length));
+        }
+
+        int num = mode(finalNumber);
+
+        if(num == artist){
+            return "A SUA VOCAÇAO É ARTISTA ";
+        }
+        else if(num == composer){
+            return "A SUA VOCAÇAO É COMPOSITOR";
+        }
+        else if(num == eventProducer){
+            return "A SUA VOCAÇAO É PRODUTOR DE EVENTOS ";
+        }else if(num == soundOperator){
+            return "A SUA VOCAÇAO É OPERADOR DE SOM ";
+        }else if(num == headhunter){
+            return "A SUA VOCAÇAO É A & R (Caça Talentos) ";
+        }else if(num == publishingCompany){
+            return "A SUA VOCAÇAO É EDITORA";
+        }else if(num == audioVisual){
+            return "A SUA VOCAÇAO É PRODUÇÃO AUDIOVISUAL";
+        }else if(num == business){
+            return "A SUA VOCAÇAO É EMPRESARIx";
+        }
 
 
 
-        return null;
 
+        return "nao consegui";
+
+
+
+
+
+
+    }
+
+    public static int mode(List<Integer> a) {
+        int maxValue = 0, maxCount= 0;
+
+        for (int i = 0; i < a.size(); ++i) {
+            int count = 0;
+            for (int j = 0; j < a.size(); ++j) {
+                if (a.get(j) == a.get(i)) ++count;
+            }
+            if (count > maxCount) {
+                maxCount = count;
+                maxValue = a.get(i);
+            }
+        }
+
+        return maxValue;
     }
 
 }
